@@ -40,12 +40,17 @@ body {
     background-color: gray;
  }
 
- #hour{
+ #box{
    background-color: white;
    border: 1px solid black;
    width: 150px;
    height: 70px;
-   margin-left: 75vw;
+   position: relative;
+   top: 20px;
+ }
+
+ #hour{
+	
  }
  
  .btn{
