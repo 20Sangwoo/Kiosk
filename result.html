@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영수증</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="" href="studycafe_seat.js">
+    <script src="studycafe_seat.js"></script>
+    <script>
+    $(document).ready(function(){ 
+        $("#close").click(function() {
+            window.close("result.html");
+        })
+        $("#print").click(function() { 
+            window.print();
+        })
+
+        let SeatNo = $("#selected").load("studycafe_Aseat.html").innerText;
+        let Time = $("#box").load("studycafe_Aseat.html").innerText;
+        let Price = times;
+
+        document.getElementsByTagName("li").innerText = `${SeatNo}`;
+    })
+    </script>
+    <style>
+        body h1{
+            text-align: center;
+        }
+        .btn{
+            width: 300px;
+            height: 40px;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DIT StudyCafe</h1>
+    <hr>
+    <h6>상호 : DIT 스터디카페 동의과학대점</h6>
+    <h6>사업자번호 : 01206555589</h6>
+    <h6>주소 : 부산광역시 부산진구 양지로 54</h6>
+    <h6>전화번호 : 010 7535 7249</h6>
+    <hr>
+    <ul>
+        <li>좌석번호 : A15 / 이용시간 : 5 시간</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <hr>
+    <h2 id="result">총 금액: 15,000 원</h2>
+    <h3>내신 금액 : 15,000 원</h3>
+    <h3>거스름돈 : 0 원</h3>
+    <hr>
+    <h6>감사합니다</h6>
+    <button class="btn" id="print">인쇄하기</button>
+    <button class="btn" id="close">닫기</button>
+</body>
+</html>
