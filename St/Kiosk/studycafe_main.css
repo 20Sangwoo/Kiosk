@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'OAG';
+    src: url("OAGothic-Medium.ttf");
+    font-weight: 800;
+    font-style: normal;
+}
+
+ body{
+    background-color: rgb(0, 34, 68);
+    font-family: 'OAG';
+    font-size: 2em;
+    color: white;
+    text-align: center;
+ }
+
+ #logo{
+    position: relative;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+ }
+   .Area{
+      width: 80vw;
+      display: flex;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+   }
+   .Text{
+      flex: 0.4;
+   }
+   .image{
+      flex: 0.3;
+   }
+   .comA{
+      flex: 0.5;
+      padding-right: 15px;
+   }
+   .comA h2{
+      align-items: center;
+      justify-content: center;
+   }
+
+   .comB{
+      flex: 0.5;
+      padding-right: 15px;
+   }
+   .comB h2{
+      align-items: center;
+      justify-content: center;
+   }
+
+   .comC{
+      flex: 0.5;
+      padding-right: 15px;
+   }
+   .comC h2{
+      align-items: center;
+      justify-content: center;
+   }
+
+   #Sel{
+      background-color: rgba(255, 255, 255, 0.5);
+   }

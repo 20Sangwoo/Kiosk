@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printHandler() {
+            window.print();
+        }
+        function inputHandler(ev) {
+            if(ev.keyCode == 13) { //엔터키를 눌렀으면
+                document.querySelector("ul").innerHTML += `<li>${this.value}</li>`; 
+                //input 태그에 입력된 내용을 ul 태그 안에 li 태그 생성해서 넣기
+                this.value = "";
+            }
+            //현재까지 ul 태그에 입력된 내용을 localStorage에 저장한다.
+            localStorage.setItem("itemList",document.querySelector("ul").innerHTML);
+        }
+        window.onload = function() {
+            document.querySelector("button").addEventListener("click", printHandler);
+            document.getElementById("newItem").addEventListener("keydown", inputHandler);
+            document.querySelector("ul").innerHTML = localStorage.getItem("itemList");
+        }
+    </script>
+</head>
+<body>
+    <h1>영수증</h1>
+    <hr>
+    <button>인쇄</button>
+    <hr>
+    <ul>
+        <li>구입 품목 1 세부내역</li>
+        <li>구입 품목 2 세부내역</li>
+        <li>구입 품목 3 세부내역</li>
+        <li>구입 품목 4 세부내역</li>
+        <li>구입 품목 5 세부내역</li>
+    </ul>
+    New Item: <input id="newitem" size="50">
+    <hr>
+    <h2>총 금액: 100,000원</h2>
+    
+</body>
+</html>
